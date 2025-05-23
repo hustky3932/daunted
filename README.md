@@ -1,14 +1,14 @@
-# DAUNTED
+# Spartan
 
 <center>
-<img src="./docs/DAUNTED.jpg" style="width:100%">
+<img src="./docs/Spartan.jpg" style="width:100%">
 </center>
 
 ## Overview
 
-DAUNTED is your resident Solana-based DeFi trading warlord—a no-BS tactician who blends alpha with attitude. He's part shitposter, part protocol whisperer, and all about winning (even if it means dying on-chain for the memes).
+Spartan is your resident Solana-based DeFi trading warlord—a no-BS tactician who blends alpha with attitude. He's part shitposter, part protocol whisperer, and all about winning (even if it means dying on-chain for the memes).
 
-DAUNTED is a sophisticated DeFi agent with a range of capabilities, including:
+Spartan is a sophisticated DeFi agent with a range of capabilities, including:
 - Managing shared trading pools.
 - Executing trades across Solana DEXs (e.g., Orca, Raydium, Meteora).
 - Tracking token data and market trends using sources like Defined.fi.
@@ -16,7 +16,7 @@ DAUNTED is a sophisticated DeFi agent with a range of capabilities, including:
 - Managing LP positions with optimal strategies.
 - Deploying autonomous trading tactics.
 
-DAUNTED always demands explicit confirmation before executing critical actions.
+Spartan always demands explicit confirmation before executing critical actions.
 
 ## Features
 
@@ -130,11 +130,11 @@ src
 1.  **Clone the repository:**
     ```bash
     git clone <your-repository-url>
-    cd DAUNTED # Or your project's root directory
+    cd Spartan # Or your project's root directory
     ```
 
 2.  **Install dependencies:**
-    Navigate to the `packages/DAUNTED` directory (or the root of this specific package if it's part of a monorepo like Eliza OS).
+    Navigate to the `packages/Spartan` directory (or the root of this specific package if it's part of a monorepo like Eliza OS).
     ```bash
     npm install
     # OR
@@ -143,7 +143,7 @@ src
 
 ## Environment Variables
 
-Create a `.env` file in the root of the project (e.g., `packages/DAUNTED/.env` or potentially at the monorepo root `../../.env` relative to `src/index.ts`). Add the following environment variables as needed. Not all variables are required for all functionalities; refer to the specific plugin or service documentation for exact requirements.
+Create a `.env` file in the root of the project (e.g., `packages/Spartan/.env` or potentially at the monorepo root `../../.env` relative to `src/index.ts`). Add the following environment variables as needed. Not all variables are required for all functionalities; refer to the specific plugin or service documentation for exact requirements.
 
 ```env
 # General API Keys for AI Models
@@ -151,15 +151,15 @@ GROQ_API_KEY=your_groq_api_key
 ANTHROPIC_API_KEY=your_anthropic_api_key
 OPENAI_API_KEY=your_openai_api_key
 
-# Discord Bot Credentials (for Investment Manager / DAUNTED)
+# Discord Bot Credentials (for Investment Manager / Spartan)
 INVESTMENT_MANAGER_DISCORD_APPLICATION_ID=your_discord_app_id
 INVESTMENT_MANAGER_DISCORD_API_TOKEN=your_discord_bot_token
 
-# Telegram Bot Credentials (for Investment Manager / DAUNTED)
+# Telegram Bot Credentials (for Investment Manager / Spartan)
 INVESTMENT_MANAGER_TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 TELEGRAM_CHANNEL_ID=your_telegram_channel_id_for_recommendations
 
-# Twitter Credentials (for Investment Manager / DAUNTED)
+# Twitter Credentials (for Investment Manager / Spartan)
 INVESTMENT_MANAGER_TWITTER_EMAIL=your_twitter_email
 INVESTMENT_MANAGER_TWITTER_USERNAME=your_twitter_username
 INVESTMENT_MANAGER_TWITTER_PASSWORD=your_twitter_password
@@ -177,11 +177,11 @@ SOLANA_RPC_URL=your_solana_rpc_endpoint    # e.g., from Helius, QuickNode, or Al
 EVM_PROVIDER_URL=your_base_rpc_endpoint    # For Base chain, (aka RPC_URL in some configs)
 
 # Wallet Configuration
-SOLANA_PUBLIC_KEY=your_DAUNTED_solana_public_key
-SOLANA_PRIVATE_KEY=your_DAUNTED_solana_private_key_base58_encoded
+SOLANA_PUBLIC_KEY=your_Spartan_solana_public_key
+SOLANA_PRIVATE_KEY=your_Spartan_solana_private_key_base58_encoded
 # Alternatively, some plugins might use these generic names:
-# WALLET_PUBLIC_KEY=your_DAUNTED_solana_public_key
-# WALLET_PRIVATE_KEY=your_DAUNTED_solana_private_key_base58_encoded
+# WALLET_PUBLIC_KEY=your_Spartan_solana_public_key
+# WALLET_PRIVATE_KEY=your_Spartan_solana_private_key_base58_encoded
 
 # Webhooks / Notifications
 TRADER_SELL_KUMA=your_kuma_webhook_url_for_sell_notifications
@@ -208,7 +208,7 @@ This will execute the test suites defined in `plugins.test.ts` and any other tes
 
 ## Running the Project
 
-As DAUNTED is designed as an agent within the Eliza OS framework, it's typically run as part of a larger Eliza OS deployment. The `src/index.ts` exports the `DAUNTED` agent configuration which can be imported and used by an Eliza OS runtime.
+As Spartan is designed as an agent within the Eliza OS framework, it's typically run as part of a larger Eliza OS deployment. The `src/index.ts` exports the `Spartan` agent configuration which can be imported and used by an Eliza OS runtime.
 
 If you are developing a specific plugin or service, you might run parts of it in isolation or using the test environment provided in `plugins.test.ts`.
 
@@ -221,7 +221,7 @@ For the `DegenIntel` frontend:
 
 ## Plugins Overview
 
-The DAUNTED agent is composed of several key plugins:
+The Spartan agent is composed of several key plugins:
 
 -   **`@elizaos/plugin-sql`**: Handles database interactions.
 -   **AI Model Plugins** (`@elizaos/plugin-groq`, `@elizaos/plugin-anthropic`, `@elizaos/plugin-openai`, `@elizaos/plugin-local-ai`): Provide access to various large language models.
@@ -229,7 +229,7 @@ The DAUNTED agent is composed of several key plugins:
 -   **Utility Plugins** (`@elizaos/plugin-pdf`, `@elizaos/plugin-video-understanding`, `@elizaos/plugin-bootstrap`): Offer various utility functions.
 -   **`@elizaos/plugin-solana`**: Provides core Solana blockchain interaction capabilities.
 
-Custom plugins specific to DAUNTED include:
+Custom plugins specific to Spartan include:
 -   **`communityInvestorPlugin`**: Manages community-driven investment strategies, recommendations, and performance tracking.
 -   **`degenIntelPlugin`**: Focuses on gathering and analyzing market intelligence from sources like Twitter, CoinMarketCap, and Birdeye. It also includes a frontend for data visualization.
 -   **`degenTraderPlugin`**: Implements core autonomous trading logic and strategies.
